@@ -10,6 +10,48 @@
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="Rocket Loading Animation">
+    </div>
+    <!-- Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!-- Results Nav -->
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+                <span>•</span>
+                <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+            </span>
+            <!-- Favorites Nav -->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaPictures()">Load More NASA Images</h3>
+            </span>
+        </div>
+        <!-- Images Container -->
+        <div class="images-container">
+            <!-- <div class="card">
+                <a href="" title="View Full Image" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2302/Trappist1h_Carroll_1238.jpg" alt="NASA Picture of the Day" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Title of Image</h5>
+                    <p class="clickable">Add to Favorites</p>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic ratione eligendi, reiciendis sunt ad vitae at, voluptas earum, et minima repudiandae facere. Reiciendis fugiat voluptatem asperiores consequatur rerum autem corrupti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo blanditiis mollitia aliquam iusto ducimus quae illo quibusdam, ullam reprehenderit alias, quod labore earum id in commodi dolorum eveniet! Quo, rem?</p>
+                    <small class="text-muted">
+                        <strong>12-12-2020</strong>
+                        <span>Copyright Info</span>
+                    </small>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Save Confirmaton -->
+    <div class="save-confirmed" hidden>
+        <h1>Added!</h1>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>

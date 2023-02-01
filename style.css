@@ -21,7 +21,16 @@ body {
 }
 
 /* Loader */
-
+.loader {
+  background: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Navigation */
 .navigation-container {
@@ -40,29 +49,56 @@ body {
   right: 0;
   width: 100%;
   height: 60px;
+  z-index: -1;
+}
 
+.navigation-items > * {
+  margin: 1em 0.5em;
+}
+
+.navigation-items > span {
+  top: 3px;
+  position: relative;
+}
+
+.clickable {
+  color: dodgerblue;
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable:hover {
+  filter: brightness(80%);
 }
 
 
 /* Images Container */
 .images-container {
-
+  width: 100%;
+  max-width: 800px;
   margin-top: 50px;
 }
 
 .card {
   background: white;
   margin: 10px 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  overflow: hidden;
+  display: block;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
 
+}
 
 .card-body {
   padding: 20px;
@@ -73,7 +109,7 @@ body {
   font-size: 24px;
 }
 
-
+.text-muted strong {margin-right: 1em;}
 
 /* Save Confirmation */
 .save-confirmed {
@@ -88,7 +124,9 @@ body {
 }
 
 /* Hidden */
-
+.hidden {
+  display: none;
+}
 
 /* Large Smartphone (Vertical) */
 @media screen and (max-width: 800px) {
@@ -103,5 +141,7 @@ body {
     font-size: 20px;
   }
 
-  
+  .save-confirmed {
+    right: 25px;
+  }
 }
